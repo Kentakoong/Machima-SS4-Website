@@ -22,6 +22,7 @@ export default function Moments() {
               height={0}
               sizes="100vw"
               className="object-cover rounded-lg w-full h-full hover:scale-105 transition ease-in-out select-none"
+              placeholder="blur"
             />
           </div>
         ))}

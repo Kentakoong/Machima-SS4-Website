@@ -48,6 +48,7 @@ export default function Team() {
                   alt={member.nickname}
                   width={300}
                   height={400}
+                  placeholder="blur"
                 />
                 <div className="px-4 py-6 gap-y-2 text-center h-full flex flex-col items-center justify-center">
                   <div>
