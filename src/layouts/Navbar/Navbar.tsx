@@ -10,16 +10,16 @@ export const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="px-4 md:px-8 py-2">
+    <nav className="px-4 py-2 md:px-8">
       <Menu>
         {({ open }) => (
-          <div className="flex flex-col sm:flex-row justify-between bg-white border drop-shadow-xl rounded-3xl sm:rounded-full px-4 py-2 w-full *:flex *:items-center">
-            <div className="flex justify-between sm:justify-start gap-2">
+          <div className="flex w-full flex-col justify-between rounded-3xl border bg-white px-4 py-2 drop-shadow-xl *:flex *:items-center sm:flex-row sm:rounded-full">
+            <div className="flex justify-between gap-2 sm:justify-start">
               <Link href="/">
-                <MachimaLogo className="size-12 hover:scale-105 transition ease-in-out hover:drop-shadow-sm bg-white rounded-full" />
+                <MachimaLogo className="size-12 rounded-full bg-white transition ease-in-out hover:scale-105 hover:drop-shadow-sm" />
               </Link>
               <MenuButton
-                className={`${open ? "rotate-90" : ""} sm:hidden transition`}
+                className={`${open ? "rotate-90" : ""} transition sm:hidden`}
                 onClick={() => setOpen(!open)}
               >
                 {open ? (
@@ -30,16 +30,16 @@ export const Navbar = () => {
               </MenuButton>
             </div>
             <div>
-              <MenuItems className="flex sm:hidden justify-center w-full text-center">
+              <MenuItems className="flex w-full justify-center text-center sm:hidden">
                 <div
                   className={`${
                     !open ? "hidden sm:flex" : "flex"
-                  } flex-col sm:flex-row sm:mt-0 w-full mt-2`}
+                  } mt-2 w-full flex-col sm:mt-0 sm:flex-row`}
                 >
                   {navList.map((it, idx) => (
                     <MenuItem key={idx}>
                       <Link
-                        className="hover:bg-gray-100 w-full rounded-lg transition py-2"
+                        className="w-full rounded-lg py-2 transition hover:bg-gray-100"
                         href={it.href}
                       >
                         {it.title}
@@ -49,7 +49,7 @@ export const Navbar = () => {
                 </div>
               </MenuItems>
               <div
-                className={`hidden px-4 gap-4 sm:flex flex-col sm:flex-row sm:mt-0 w-full mt-2`}
+                className={`mt-2 hidden w-full flex-col gap-4 px-4 sm:mt-0 sm:flex sm:flex-row`}
               >
                 {navList.map((it, idx) => (
                   <MenuItem key={idx}>

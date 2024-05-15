@@ -1,7 +1,7 @@
 export default function Awards() {
   return (
     <main>
-      <section className="flex flex-col items-center justify-center mt-16 max-w-xl text-center mx-auto">
+      <section className="mx-auto mt-16 flex max-w-xl flex-col items-center justify-center text-center">
         <h1 className="text-4xl font-semibold">Awards</h1>
         <p className="mt-4 leading-5">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam

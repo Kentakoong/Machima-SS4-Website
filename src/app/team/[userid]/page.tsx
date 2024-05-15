@@ -12,24 +12,24 @@ export default function MemberPage({ params }: { params: { userid: string } }) {
   const member = members.find((member) => member.id === params.userid);
 
   return (
-    <main className="w-full h-full flex justify-center items-center">
-      <div className="max-w-screen-xl w-full relative justify-start h-full md:max-h-[30rem] flex flex-col md:flex-row items-center gap-6 md:bg-white p-4 rounded-3xl overflow-hidden md:drop-shadow-2xl">
-        <MachimaLogo className="size-[30rem] -z-10 absolute -right-52 md:-right-44 md:-bottom-52 -bottom-64 opacity-30" />
-        <div className="flex justify-start w-full md:w-auto">
+    <main className="flex h-full w-full items-center justify-center">
+      <div className="relative flex h-full w-full max-w-screen-xl flex-col items-center justify-start gap-6 overflow-hidden rounded-3xl p-4 md:max-h-[30rem] md:flex-row md:bg-white md:drop-shadow-2xl">
+        <MachimaLogo className="absolute -bottom-64 -right-52 -z-10 size-[30rem] opacity-30 md:-bottom-52 md:-right-44" />
+        <div className="flex w-full justify-start md:w-auto">
           <img
-            className="rounded-2xl max-h-96 md:max-h-full object-contain"
+            className="max-h-96 rounded-2xl object-contain md:max-h-full"
             src={`/team/members/${member?.id}.jpeg`}
             alt={member?.nickname ?? ""}
           />
         </div>
-        <div className="flex flex-col px-2 w-full">
-          <h2 className="text-2xl md:text-4xl text-gray-600">
+        <div className="flex w-full flex-col px-2">
+          <h2 className="text-2xl text-gray-600 md:text-4xl">
             {member?.nickname}
           </h2>
-          <h1 className="text-3xl md:text-5xl font-semibold">
+          <h1 className="text-3xl font-semibold md:text-5xl">
             {member?.fullname}
           </h1>
-          <p className="text-lg md:text-2xl font-light mt-4">{member?.quote}</p>
+          <p className="mt-4 text-lg font-light md:text-2xl">{member?.quote}</p>
           <div className="mt-4 flex gap-x-2">
             {member?.github && (
               <Link href={member.github}>

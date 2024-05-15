@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Moments() {
   return (
     <main>
-      <section className="flex flex-col items-center justify-center mt-16 max-w-xl text-center mx-auto">
+      <section className="mx-auto mt-16 flex max-w-xl flex-col items-center justify-center text-center">
         <h1 className="text-4xl font-semibold">Moments</h1>
         <p className="mt-4 leading-5">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
@@ -11,9 +11,9 @@ export default function Moments() {
           exercitationem quos aspernatur quod.
         </p>
       </section>
-      <section className="max-w-5xl w-full grid justify-center sm:grid-cols-3 lg:grid-cols-4 mx-auto gap-6 mt-12">
+      <section className="mx-auto mt-12 grid w-full max-w-5xl justify-center gap-6 sm:grid-cols-3 lg:grid-cols-4">
         {[...Array(60)].map((_, idx) => (
-          <div className="relative w-full sm:max-w-64 h-96" key={idx}>
+          <div className="relative h-96 w-full sm:max-w-64" key={idx}>
             <Image
               key={idx}
               src={`/moments/${idx + 1}.jpeg`}
@@ -21,8 +21,7 @@ export default function Moments() {
               width={0}
               height={0}
               sizes="100vw"
-              className="object-cover rounded-lg w-full h-full hover:scale-105 transition ease-in-out select-none"
-              placeholder="blur"
+              className="h-full w-full select-none rounded-lg object-cover transition ease-in-out hover:scale-105"
             />
           </div>
         ))}
