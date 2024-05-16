@@ -215,4 +215,11 @@ export const members = [
     cv: "https://drive.google.com/drive/folders/1ctfiNplKmWydq46NrU-6ozoZbX0Kj9L3",
     github: "https://github.com/numbernard",
   },
+  {
+    id: "400365",
+    nickname: "เทพ",
+    fullname: "ไกรเทพ สิริสารวรรณกุล",
+    quote: "แม่ทำงานลูกทำทรง แม่ยืนงงลูกทำไร",
+    cv: "https://drive.google.com/file/d/17wR7Q095RjMr4Et-KqCFP5HEvjZGevuj/view?usp=sharing",
+  },
 ];
