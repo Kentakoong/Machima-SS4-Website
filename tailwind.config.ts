@@ -10,7 +10,13 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Noto Sans Thai", "Montserrat", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+        "noto-sans-thai": ["Noto Sans Thai", "sans-serif"],
+      },
+      colors: {
+        orange: {
+          machima: "#FFA32E",
+        },
       },
     },
   },

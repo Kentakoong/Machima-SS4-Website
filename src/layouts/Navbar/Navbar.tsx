@@ -52,9 +52,9 @@ export const Navbar = () => {
                 className={`mt-2 hidden w-full flex-col gap-4 px-4 sm:mt-0 sm:flex sm:flex-row`}
               >
                 {navList.map((it, idx) => (
-                  <MenuItem key={idx}>
-                    <Link href={it.href}>{it.title}</Link>
-                  </MenuItem>
+                  <Link key={idx} href={it.href}>
+                    {it.title}
+                  </Link>
                 ))}
               </div>
             </div>
