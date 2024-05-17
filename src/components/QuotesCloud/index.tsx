@@ -27,6 +27,8 @@ export const QuotesCloud = ({
 
   const [visibleQuotes, setVisibleQuotes] = useState<boolean[]>([]);
 
+  const [firstLoad, setFirstLoad] = useState(true);
+
   const getRandomVisibility = useCallback(() => {
     const visibility = Array(quotes.length).fill(false);
     const minVisible = Math.ceil(0.15 * quotes.length);
@@ -56,19 +58,33 @@ export const QuotesCloud = ({
     return isMatch ? `${quoteLocation[axis as "x" | "y"]}%` : undefined;
   }
 
+  const effectLoad = useCallback(() => {
+    const newPositions = quotes.map(() => getRandomPosition());
+    const newVisibility = getRandomVisibility();
+
+    setVisibleQuotes((prevVisibleQuotes) =>
+      prevVisibleQuotes.map((visible) => (visible ? false : visible)),
+    );
+
+    setTimeout(() => {
+      setQuotesLocation(newPositions);
+      setVisibleQuotes(newVisibility);
+    }, 1000);
+  }, [getRandomVisibility, quotes]);
+
   useEffect(() => {
-    const interval = setInterval(() => {
+    if (firstLoad) {
+      setFirstLoad(false);
+
       const newPositions = quotes.map(() => getRandomPosition());
-      const newVisibility = getRandomVisibility();
+      setQuotesLocation(newPositions);
+      setVisibleQuotes(getRandomVisibility());
 
-      setVisibleQuotes((prevVisibleQuotes) =>
-        prevVisibleQuotes.map((visible) => (visible ? false : visible)),
-      );
+      return;
+    }
 
-      setTimeout(() => {
-        setQuotesLocation(newPositions);
-        setVisibleQuotes(newVisibility);
-      }, 1000);
+    const interval = setInterval(() => {
+      effectLoad();
     }, 3000);
 
     return () => clearInterval(interval);
