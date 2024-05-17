@@ -28,10 +28,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${montserrat.className} ${noto.className}`}>
         <main className="relative flex h-screen flex-col overflow-x-hidden">
-          <div className="absolute left-0 right-0 top-0">
+          <div className="absolute left-0 right-0 top-0 z-20">
             <Navbar />
           </div>
-          <div className="flex grow flex-col pt-20">{children}</div>
+          <div className="flex grow flex-col">{children}</div>
           <Footer />
         </main>
       </body>
