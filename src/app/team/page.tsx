@@ -9,13 +9,11 @@ export default function Team() {
   const [filter, setFilter] = useState("all");
 
   return (
-    <main className="pt-20">
+    <main className="px-4 pt-20 xl:px-0">
       <section className="mx-auto mt-16 flex max-w-xl flex-col items-center justify-center text-center">
         <h1 className="text-4xl font-semibold">Our Team</h1>
         <p className="mt-4 leading-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          voluptatem, quia, doloremque quidem, aperiam iusto quibusdam
-          exercitationem quos aspernatur quod.
+          Meet the team behind the scenes at Machima House
         </p>
       </section>
       <section className="mx-auto mt-12 flex flex-col items-center justify-center">
