@@ -88,7 +88,7 @@ export const QuotesCloud = ({
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [getRandomVisibility, quotes]);
+  }, [effectLoad, firstLoad, getRandomVisibility, quotes]);
 
   return (
     <div className="hidden md:block">
