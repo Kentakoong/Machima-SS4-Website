@@ -75,10 +75,6 @@ const navList = [
     href: "/awards",
   },
   {
-    title: "Gallery",
-    href: "/gallery",
-  },
-  {
     title: "Moments",
     href: "/moments",
   },
