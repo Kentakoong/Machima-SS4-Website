@@ -2,14 +2,10 @@ import Image from "next/image";
 
 export default function Moments() {
   return (
-    <main>
+    <main className="pt-20">
       <section className="mx-auto mt-16 flex max-w-xl flex-col items-center justify-center text-center">
         <h1 className="text-4xl font-semibold">Moments</h1>
-        <p className="mt-4 leading-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          voluptatem, quia, doloremque quidem, aperiam iusto quibusdam
-          exercitationem quos aspernatur quod.
-        </p>
+        <p className="mt-4 leading-5">Moments. At Machima House</p>
       </section>
       <section className="mx-auto mt-12 grid w-full max-w-5xl justify-center gap-6 sm:grid-cols-3 lg:grid-cols-4">
         {[...Array(60)].map((_, idx) => (
