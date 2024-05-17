@@ -9,7 +9,7 @@ export default function Team() {
   const [filter, setFilter] = useState("all");
 
   return (
-    <main>
+    <main className="pt-20">
       <section className="mx-auto mt-16 flex max-w-xl flex-col items-center justify-center text-center">
         <h1 className="text-4xl font-semibold">Our Team</h1>
         <p className="mt-4 leading-5">
@@ -32,7 +32,7 @@ export default function Team() {
             </button>
           ))}
         </div>
-        <div className="mx-auto mt-6 grid grid-cols-2 gap-6 sm:max-w-6xl sm:grid-cols-3 lg:grid-cols-4">
+        <div className="mx-auto mt-6 grid gap-6 sm:max-w-6xl sm:grid-cols-3 lg:grid-cols-4">
           {members
             .sort((a, b) => Number(a.id) - Number(b.id))
             .map((member, idx) => (
